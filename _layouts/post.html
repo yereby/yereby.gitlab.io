@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{{ page.excerpt | strip_html }}">
+
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="{{ page.excerpt | strip_html }}">
+    <meta property="og:url" content="https://yereby.net{{ page.url }}">
+    <meta property="article:published_time" content="{{ page.date | date: '%Y-%m-%d'}}">
+    <meta property="article:author" content="yereby">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@yereby" />
+    <meta name="twitter:title" content="{{ page.title }}" />
+    <meta name="twitter:description" content="{{ page.excerpt | strip_html }}" />
+
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+
+  <body>
+    <article role="main" class="post">
+      <a class="blog-name" href="/">yereby.net</a>
+
+      <time class="post-date" datetime="{{ page.date | date: '%Y-%m-%d' }}">
+        Publié le
+        {{ page.date | date: "%d" }}
+        {% assign m = page.date | date: "%-m" %}
+        {% case m %}
+          {% when '1' %}Janvier
+          {% when '2' %}Février
+          {% when '3' %}Mars
+          {% when '4' %}Avril
+          {% when '5' %}Mai
+          {% when '6' %}Juin
+          {% when '7' %}Juillet
+          {% when '8' %}Août
+          {% when '9' %}Septembre
+          {% when '10' %}Octobre
+          {% when '11' %}Novembre
+          {% when '12' %}Décembre
+        {% endcase %}
+        {{ page.date | date: "%Y" }}
+      </time>
+
+      <h1 class="post-title">{{ page.title }}</h1>
+
+      {{ content }}
+    </article>
+
+    {% include footer.html %}
+
+    <script src="/script.js" defer></script>
+  </body>
+</html>

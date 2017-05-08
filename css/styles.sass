@@ -1,0 +1,119 @@
+---
+---
+
+@import 'reset'
+
+// Variables
+
+$backround: #f3f7f8
+$dates: #CE6C12
+$links: #224ecc
+$text: #313131
+
+// CSS
+
+body
+  align-items: center
+  background-color: $backround
+  color: $text
+  display: flex
+  flex-direction: column
+  font-family: "Hevetica Neue", Heveltica, arial, sans-serif
+  font-size: 120%
+  line-height: 1.5
+  margin: 1em 0 0 0
+  padding: 0 0.5em
+
+a
+  color: $links
+
+figure
+  font-size: 0.9em
+  margin: 0
+  text-align: center
+
+// Largeur de la page
+
+.post,
+.posts,
+.footer
+  max-width: 50em
+  width: 100%
+
+// Liste des posts sur la home
+
+.posts-list
+  list-style-type: none
+  padding: 0
+.posts-list-item
+  align-items: baseline
+  display: flex
+  justify-content: space-between
+
+.posts-item-title
+  font-size: 1.1em
+.posts-item-excerpt
+  margin: 0 0 1em 0
+.posts-item-date
+  flex: 1 0 9em
+  font-size: 0.8em
+  padding: 0 0 0 1em
+  text-align: right
+  color: $dates
+
+// Un post
+
+.blog-name
+  display: block
+  font-size: 1.5em
+  margin: 0 0 1em 0
+.post-date
+  color: $dates
+  margin: 0 0 0 0
+
+.post-title
+  font-size: 2.2em
+  margin: 0 0 0 0
+.post-footer
+  border-top: 1px dashed $text
+
+// Permaliens
+
+.permalink
+  margin: 0 0 0 0.2em
+.picto
+  border-bottom: 1px solid transparent
+.permalink:hover .picto
+  border-bottom: 1px solid black
+
+// Affichage du code
+
+.highlight
+  padding: 0.5em 0.7em
+
+// Footer global
+
+.footer
+  border-top: 1px solid $text
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin: 2em 0 0 0
+.copyleft,
+.links-social
+  flex: 1 0 15em
+
+.copyleft
+  margin: 0 0 1em 0
+.link-social
+  display: inline-block
+  &:not(:last-child)
+    &:after
+      content: '—'
+      margin-right: 0.5em
+
+@media screen and (max-width: 40em)
+  .posts-item-date
+    display: none
+
+@import 'mukluk'

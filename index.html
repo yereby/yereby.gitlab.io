@@ -1,0 +1,36 @@
+---
+layout: default
+title: Double quote
+---
+
+<ul class="posts-list">
+  {% for post in site.posts %}
+    <li class="posts-list-item">
+      <div>
+        <a class="posts-item-title" href="{{ post.url }}">{{ post.title }}</a>
+
+        <p class="posts-item-excerpt">{{ post.excerpt | strip_html }}</p>
+      </div>
+
+      <time class="posts-item-date" datetime="{{ post.date | date: '%Y-%m-%d' }}">
+        {{ post.date | date: "%d" }}
+        {% assign m = post.date | date: "%-m" %}
+        {% case m %}
+          {% when '1' %}Janvier
+          {% when '2' %}Février
+          {% when '3' %}Mars
+          {% when '4' %}Avril
+          {% when '5' %}Mai
+          {% when '6' %}Juin
+          {% when '7' %}Juillet
+          {% when '8' %}Août
+          {% when '9' %}Septembre
+          {% when '10' %}Octobre
+          {% when '11' %}Novembre
+          {% when '12' %}Décembre
+        {% endcase %}
+        {{ post.date | date: "%Y" }}
+      </time>
+    </li>
+  {% endfor %}
+</ul>
