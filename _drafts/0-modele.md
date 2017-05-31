@@ -5,7 +5,7 @@ date: 2015-05-08
 ---
 
 Ce paragraphe sera utilisé en extrait de l'article dans la liste des
-articles sur la home.
+articles sur la home. Ainsi qu'en balises meta
 
 ## Metadatas
 - `layout` correspond au style à appliquer pour un article ;
