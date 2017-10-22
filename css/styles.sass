@@ -2,6 +2,7 @@
 ---
 
 @import 'reset'
+@import 'mukluk'
 
 // Variables
 
@@ -76,6 +77,7 @@ figure
   margin: 0 0 0 0
 .post-footer
   border-top: 1px dashed $text
+  padding: 0.5em 0
 
 // Permaliens
 
@@ -98,22 +100,15 @@ figure
   display: flex
   flex-wrap: wrap
   justify-content: space-between
-  margin: 2em 0 0 0
-.copyleft,
-.links-social
-  flex: 1 0 15em
-
+  padding: 1em 0
 .copyleft
   margin: 0 0 1em 0
+  width: 50%
 .link-social
-  display: inline-block
-  &:not(:last-child)
-    &:after
-      content: '—'
-      margin-right: 0.5em
+  list-style: none
+  padding-left: 1em
+  text-align: right
 
 @media screen and (max-width: 40em)
   .posts-item-date
     display: none
-
-@import 'mukluk'

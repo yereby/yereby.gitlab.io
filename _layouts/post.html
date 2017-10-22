@@ -27,7 +27,7 @@
             window.location = window.location.toString().replace(/^http:/, "https:");
         }
     </script>
-    
+
     <link rel="stylesheet" href="/css/styles.css">
   </head>
 
@@ -59,6 +59,8 @@
       <h1 class="post-title">{{ page.title }}</h1>
 
       {{ content }}
+
+      {% include footer-post.html %}
     </article>
 
     {% include footer.html %}
